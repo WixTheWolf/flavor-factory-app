@@ -1,51 +1,96 @@
-# Flavor Factory B2B Mobile App
+# Flavor Factory B2B Mobile App - Complete Documentation
 
-A professional React Native mobile application for bulk product ordering and purchase order management.
+A professional React Native mobile application for flavor ingredient ordering and purchase order management.
 
 ## Overview
 
-Flavor Factory B2B is a wholesale food and ingredients ordering platform designed specifically for restaurants, cafes, bakeries, and food service businesses. The app provides a seamless experience for bulk purchasing with tiered pricing, purchase order management, and business account features.
+Flavor Factory B2B is a specialized flavor ingredient ordering platform designed for manufacturers and businesses across multiple industries. The app enables seamless bulk purchasing, technical specification review, formulation support, and complete purchase order management with integration to vDosPlus inventory system.
+
+### Industries Served
+
+- **Bakery**: Vanilla extracts, fruit flavors, spice compounds
+- **Beverage**: Juice flavors, soda systems, coffee flavors
+- **Food Manufacturing**: Specialized food ingredients and compounds
+- **Pharmaceutical**: USP/FCC grade flavoring agents for medications
+- **Nutraceutical**: Vitamin-compatible flavors, supplement ingredients
+- **Syrups**: Concentrated flavor syrups for beverages
+- **Oral Care**: Toothpaste, mouthwash, pharmaceutical-grade flavors
+- **Vape**: Specialized vaping compounds and flavoring systems
+- **Confectionery**: Candy, chocolate, and confection flavors
+- **Dairy**: Ice cream, yogurt, and dairy product flavors
 
 ## Features
 
-### 1. Product Catalog & Browsing
-- Browse extensive product catalog with search functionality
-- Filter by category
-- View detailed product information including:
-  - Minimum Order Quantities (MOQ)
-  - Unit pricing and bulk pricing
-  - Stock status
-  - Product specifications
+### 1. Advanced Flavor Product Catalog
+- Browse 500+ flavor ingredients organized by industry application
+- Search and filter by flavor type, industry, and certifications
+- View detailed flavor specifications:
+  - Technical flavor profiles and notes
+  - Application suggestions (e.g., "Cakes, Cookies, Pastries")
+  - Grade certifications (USP/FCC for pharma-grade options)
+  - Solubility information (water-soluble, oil-soluble, dual-phase)
+  - Heat stability and processing guidelines
+- Minimum Order Quantities specific to each flavor compound
+- Tiered pricing (unit vs. bulk discounts)
+- Real-time stock status from vDosPlus inventory
 
-### 2. Bulk Ordering System
-- Add products to purchase orders with quantity specifications
+### 2. Technical Flavor Information
+- Comprehensive specifications for each flavor compound
+- Flavor family categorization
+- Grade certifications and compliance standards
+- Application guides for different industries
+- Usage rates and mixing recommendations
+- Storage and handling instructions
+- Compatibility charts with common bases and carriers
+### 3. B2B Purchase Order & Checkout
+- Add flavor compounds to purchase orders with quantity specifications
 - Real-time price calculation based on order quantity
-- Automatic bulk pricing application
-- Support for multiple units (lbs, boxes, gallons, etc.)
-
-### 3. Purchase Order Management
-- Create and draft purchase orders
+- Automatic bulk pricing application for MOQ compliance
+- Support for multiple units (lbs, gallons, etc.)
+- Draft purchase orders before submission
 - Add company and shipping information
-- Specify custom PO numbers
-- Add special notes and requirements
-- Submit orders for processing
-- Track order history and status
+- Specify custom PO numbers for internal tracking
+- Add technical notes or formulation requirements
+- Request custom quotes for specialized blends
+- Submit orders with confirmation
 
-### 4. Order Tracking
+### 4. Order Tracking & Management
 - View all submitted purchase orders
 - Track order status (pending, confirmed, shipped, delivered)
 - Access order details and history
-- Download order receipts
+- Download order fulfillment confirmations
+- Monitor shipment status synchronized with vDosPlus
 
-### 5. Business Account Features
-- Company profile management
-- Multiple shipping addresses
-- Contact information management
-- Order history and analytics
+### 5. Technical Support & Account Features
+- Company profile management for manufacturing partners
+- Multiple shipping and receiving addresses
+- Contact information and procurement contact management
+- Flavor technical knowledge base
+- Application notes and usage guidelines
+- Direct access to technical support team
 
-### 6. Quote Requests
-- Request custom quotes for bulk orders
-- Direct communication with sales team
+### 6. Custom Quote Requests
+- Request custom flavor blends and formulations
+- Submit special requests for non-standard applications
+- Direct communication with Flavor Factory technical team
+- Quote tracking and follow-up
+
+## About Flavor Factory
+
+Flavor Factory is a premier flavor ingredient manufacturer serving multiple industries for over 25 years. We specialize in:
+
+- **High-Impact Flavorings** for bakery, beverage, confectionery, and dairy products
+- **Pharmaceutical-Grade Compounds** meeting USP/FCC standards
+- **Nutraceutical Solutions** compatible with vitamin and supplement formulations
+- **Specialty Oral Care Flavors** for toothpaste, mouthwash, and medicated products
+- **Advanced Vape Compounds** with precise flavor delivery systems
+- **Custom Formulations** tailored to specific application requirements
+
+Our commitment is to provide technical excellence, consistent quality, and innovative flavor solutions backed by deep industry expertise.
+
+**Location:** Charlotte, NC  
+**Industries Served:** Bakery, Beverage, Food Manufacturing, Pharmaceutical, Nutraceutical, Oral Care, Vape, Confectionery, Dairy  
+**Integrations:** vDosPlus inventory management, direct sales CRM, B2B ordering systems
 
 ## Technology Stack
 

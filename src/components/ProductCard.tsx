@@ -27,9 +27,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) => {
           <Text style={styles.categoryText}>{product.category}</Text>
         </View>
 
+        {product.applications && (
+          <View style={styles.appsContainer}>
+            <Text style={styles.appsText}>{product.applications.slice(0, 2).join(', ')}</Text>
+          </View>
+        )}
+
         <View style={styles.moqContainer}>
           <Icon name="cube-outline" size={12} color="#666" />
-          <Text style={styles.moqText}>MOQ: {product.moq}</Text>
+          <Text style={styles.moqText}>MOQ: {product.moq} {product.unit}</Text>
         </View>
 
         <View style={styles.priceRow}>
@@ -94,6 +100,19 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 10,
     color: '#FF6B35',
+    fontWeight: '500',
+  },
+  appsContainer: {
+    backgroundColor: '#E3F2FD',
+    borderRadius: 3,
+    paddingHorizontal: 4,
+    paddingVertical: 2,
+    marginBottom: 6,
+    alignSelf: 'flex-start',
+  },
+  appsText: {
+    fontSize: 9,
+    color: '#1976D2',
     fontWeight: '500',
   },
   moqContainer: {

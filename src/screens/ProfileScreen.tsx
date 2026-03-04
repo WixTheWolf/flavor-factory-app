@@ -21,10 +21,10 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({ navigation }) => {
   const auth = useSelector((state: RootState) => state.auth);
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
-    companyName: auth.user?.name || 'ABC Restaurant Group',
-    email: auth.user?.email || 'contact@abc-group.com',
-    phone: auth.user?.phone || '+1-555-123-4567',
-    address: auth.user?.address || '123 Main St, Atlanta, GA 30301',
+    companyName: auth.user?.name || 'Premium Bakery Co.',
+    email: auth.user?.email || 'orders@premiumbakery.com',
+    phone: auth.user?.phone || '+1-404-555-0123',
+    address: auth.user?.address || '456 Commerce Drive, Atlanta, GA 30303',
   });
 
   const handleUpdateProfile = () => {

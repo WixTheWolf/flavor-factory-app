@@ -69,6 +69,29 @@ const ProductDetailsScreen: React.FC<ProductDetailsScreenProps> = ({
           </View>
         </View>
 
+        {product.spec && (
+          <>
+            <Text style={styles.sectionTitle}>Specifications</Text>
+            <View style={styles.specBox}>
+              <Text style={styles.specBoxText}>{product.spec}</Text>
+            </View>
+          </>
+        )}
+
+        {product.applications && (
+          <>
+            <Text style={styles.sectionTitle}>Applications</Text>
+            <View style={styles.appsList}>
+              {product.applications.map((app: string, idx: number) => (
+                <View key={idx} style={styles.appItem}>
+                  <Icon name="checkmark-circle" size={16} color="#FF6B35" />
+                  <Text style={styles.appText}>{app}</Text>
+                </View>
+              ))}
+            </View>
+          </>
+        )}
+
         <View style={styles.pricingSection}>
           <Text style={styles.sectionTitle}>Pricing</Text>
           <View style={styles.priceRow}>
@@ -308,6 +331,38 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     marginLeft: 6,
+  },
+  specBox: {
+    backgroundColor: '#f9f9f9',
+    borderLeftColor: '#FF6B35',
+    borderLeftWidth: 3,
+    borderRadius: 4,
+    padding: 12,
+    marginBottom: 16,
+  },
+  specBoxText: {
+    fontSize: 13,
+    color: '#333',
+    lineHeight: 20,
+    fontWeight: '500',
+  },
+  appsList: {
+    backgroundColor: '#f9f9f9',
+    borderRadius: 6,
+    padding: 10,
+    marginBottom: 20,
+  },
+  appItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+    paddingVertical: 6,
+  },
+  appText: {
+    fontSize: 13,
+    color: '#333',
+    marginLeft: 8,
+    fontWeight: '500',
   },
 });
 

@@ -19,39 +19,45 @@ const AboutUsScreen: React.FC<AboutUsScreenProps> = ({ navigation }) => {
 
   const companyData = {
     name: 'Flavor Factory',
-    description: 'Premium wholesale ingredients and food products for businesses',
-    founded: '2015',
-    mission: 'To provide high-quality, affordable bulk food products to restaurants, cafes, bakeries, and food service businesses worldwide.',
+    description: 'Premium flavor ingredient manufacturer for food, beverage, pharmaceutical, and specialty industries',
+    founded: '1998',
+    mission: 'To deliver the highest quality flavor compounds and specialty ingredients that enable our customers to create exceptional products across bakery, beverage, pharmaceutical, nutraceutical, oral care, vape, confectionery, and dairy applications.',
     values: [
-      'Quality First - We never compromise on product quality',
-      'Reliable Delivery - Fast and dependable shipping',
-      'Customer Support - 24/7 professional support',
-      'Competitive Pricing - Best bulk prices in the industry',
+      'Quality & Compliance - USP/FCC standards, pharmaceutical-grade options',
+      'Innovation - Continuous flavor development and application solutions',
+      'Technical Excellence - Deep flavor knowledge and formulation support',
+      'Reliability - Consistent inventory and on-time delivery',
     ],
     phone: '+1-800-FLAVOR1',
-    email: 'info@flavorfa ctory.com',
-    address: '123 Industrial Ave, Food City, FC 12345',
-    website: 'www.flavorfa ctory.com',
+    email: 'info@flavorfactory.net',
+    address: '123 Industrial Drive, Charlotte, NC 28205',
+    website: 'www.flavorfactory.net',
   };
 
   const team = [
     {
       id: '1',
-      name: 'John Smith',
+      name: 'Robert Mitchell',
       title: 'CEO & Founder',
-      bio: 'Industry veteran with 20+ years in wholesale food business',
+      bio: 'Flavor chemist with 25+ years developing specialty ingredients for global brands',
     },
     {
       id: '2',
-      name: 'Maria Garcia',
-      title: 'VP of Operations',
-      bio: 'Logistics expert ensuring timely delivery',
+      name: 'Sarah Johnson',
+      title: 'VP Technical Services',
+      bio: 'Formulation expert helping customers optimize flavor applications',
     },
     {
       id: '3',
-      name: 'David Chen',
-      title: 'Head of Quality',
-      bio: 'Food safety certified with strict quality control',
+      name: 'Michael Park',
+      title: 'Director of Quality & Compliance',
+      bio: 'USP/FCC compliance specialist ensuring pharmaceutical-grade standards',
+    },
+    {
+      id: '4',
+      name: 'Jennifer Lee',
+      title: 'Director of Customer Relations',
+      bio: 'Multi-industry expertise supporting bakery, beverage, and pharma customers',
     },
   ];
 
