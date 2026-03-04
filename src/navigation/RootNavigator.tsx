@@ -11,6 +11,10 @@ import AboutUsScreen from '../screens/AboutUsScreen';
 import OrdersScreen from '../screens/OrdersScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import CheckoutScreen from '../screens/CheckoutScreen';
+import AdminDashboardScreen from '../screens/AdminDashboardScreen';
+import RecurringOrdersScreen from '../screens/RecurringOrdersScreen';
+import CustomQuoteScreen from '../screens/CustomQuoteScreen';
+import BillingPaymentScreen from '../screens/BillingPaymentScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -110,6 +114,26 @@ const ProfileStackNavigator = () => (
       name="Orders"
       component={OrdersScreen}
       options={{ title: 'My Orders' }}
+    />
+    <Stack.Screen
+      name="RecurringOrders"
+      component={RecurringOrdersScreen}
+      options={{ title: 'Recurring Orders' }}
+    />
+    <Stack.Screen
+      name="CustomQuote"
+      component={CustomQuoteScreen}
+      options={{ title: 'Custom Quotes' }}
+    />
+    <Stack.Screen
+      name="BillingPayment"
+      component={BillingPaymentScreen}
+      options={{ title: 'Billing & Payments' }}
+    />
+    <Stack.Screen
+      name="AdminDashboard"
+      component={AdminDashboardScreen}
+      options={{ title: 'Admin Dashboard' }}
     />
   </Stack.Navigator>
 );

@@ -203,20 +203,50 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({ navigation }) => {
               <Icon name="chevron-forward" size={20} color="#999" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.actionButton}>
-              <Icon name="download-outline" size={20} color="#FF6B35" />
+            <TouchableOpacity
+              style={styles.actionButton}
+              onPress={() => navigation.navigate('RecurringOrders')}
+            >
+              <Icon name="calendar-outline" size={20} color="#FF6B35" />
               <View style={styles.actionContent}>
-                <Text style={styles.actionTitle}>Invoices & Receipts</Text>
-                <Text style={styles.actionSubtitle}>Download documents</Text>
+                <Text style={styles.actionTitle}>Recurring Orders</Text>
+                <Text style={styles.actionSubtitle}>Manage order templates</Text>
               </View>
               <Icon name="chevron-forward" size={20} color="#999" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.actionButton}>
-              <Icon name="heart-outline" size={20} color="#FF6B35" />
+            <TouchableOpacity
+              style={styles.actionButton}
+              onPress={() => navigation.navigate('CustomQuote')}
+            >
+              <Icon name="flask-outline" size={20} color="#FF6B35" />
               <View style={styles.actionContent}>
-                <Text style={styles.actionTitle}>Saved Items</Text>
-                <Text style={styles.actionSubtitle}>Your favorite products</Text>
+                <Text style={styles.actionTitle}>Custom Flavors</Text>
+                <Text style={styles.actionSubtitle}>Request custom quotes</Text>
+              </View>
+              <Icon name="chevron-forward" size={20} color="#999" />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.actionButton}
+              onPress={() => navigation.navigate('BillingPayment')}
+            >
+              <Icon name="card-outline" size={20} color="#FF6B35" />
+              <View style={styles.actionContent}>
+                <Text style={styles.actionTitle}>Billing & Payments</Text>
+                <Text style={styles.actionSubtitle}>Payment methods & invoices</Text>
+              </View>
+              <Icon name="chevron-forward" size={20} color="#999" />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.actionButton}
+              onPress={() => navigation.navigate('AdminDashboard')}
+            >
+              <Icon name="settings-outline" size={20} color="#FF6B35" />
+              <View style={styles.actionContent}>
+                <Text style={styles.actionTitle}>Admin Dashboard</Text>
+                <Text style={styles.actionSubtitle}>Manage products & inventory</Text>
               </View>
               <Icon name="chevron-forward" size={20} color="#999" />
             </TouchableOpacity>

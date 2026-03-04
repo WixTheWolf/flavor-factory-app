@@ -1,10 +1,10 @@
 # Flavor Factory B2B Mobile App - Complete Documentation
 
-A professional React Native mobile application for flavor ingredient ordering and purchase order management.
+A professional React Native mobile application for comprehensive flavor ingredient ordering, inventory management, admin dashboards, recurring order automation, custom formulation requests, and complete B2B commerce solutions.
 
 ## Overview
 
-Flavor Factory B2B is a specialized flavor ingredient ordering platform designed for manufacturers and businesses across multiple industries. The app enables seamless bulk purchasing, technical specification review, formulation support, and complete purchase order management with integration to vDosPlus inventory system.
+Flavor Factory B2B is a feature-rich flavor ingredient ordering and business management platform designed for manufacturers and businesses across multiple industries. The app enables seamless bulk purchasing, technical specification review, formulation support, complete purchase order management, recurring order automation, custom flavor requests, admin product/inventory control, integrated payment processing, and direct synchronization with vDosPlus inventory system.
 
 ### Industries Served
 
