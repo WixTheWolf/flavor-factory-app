@@ -1,0 +1,7 @@
+{
+  "name": "flavor-factory-app",
+  "displayName": "Flavor Factory",
+  "version": "1.0.0",
+  "description": "E-commerce mobile app for Flavor Factory",
+  "platforms": ["ios", "android"]
+}
