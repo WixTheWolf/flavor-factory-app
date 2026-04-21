@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import HomeScreen from '../screens/HomeScreen';
 import ProductsScreen from '../screens/ProductsScreen';
 import ProductDetailsScreen from '../screens/ProductDetailsScreen';
 import CartScreen from '../screens/CartScreen';
@@ -18,6 +19,27 @@ import BillingPaymentScreen from '../screens/BillingPaymentScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
+const HomeStackNavigator = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerShown: true,
+      headerStyle: {
+        backgroundColor: '#FF6B35',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}
+  >
+    <Stack.Screen
+      name="Home"
+      component={HomeScreen}
+      options={{ title: 'The Flavor Factory' }}
+    />
+  </Stack.Navigator>
+);
 
 const ProductsStackNavigator = () => (
   <Stack.Navigator
@@ -145,7 +167,9 @@ const RootNavigator = () => {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName: string = '';
-            if (route.name === 'ProductsStack') {
+            if (route.name === 'HomeStack') {
+              iconName = focused ? 'home' : 'home-outline';
+            } else if (route.name === 'ProductsStack') {
               iconName = focused ? 'storefront' : 'storefront-outline';
             } else if (route.name === 'CartStack') {
               iconName = focused ? 'cart' : 'cart-outline';
@@ -161,6 +185,11 @@ const RootNavigator = () => {
           headerShown: false,
         })}
       >
+        <Tab.Screen
+          name="HomeStack"
+          component={HomeStackNavigator}
+          options={{ tabBarLabel: 'Home' }}
+        />
         <Tab.Screen
           name="ProductsStack"
           component={ProductsStackNavigator}
