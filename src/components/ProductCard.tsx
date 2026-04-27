@@ -24,12 +24,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) => {
         </Text>
 
         <View style={styles.categoryBadge}>
-          <Text style={styles.categoryText}>{product.category}</Text>
+          <Text style={styles.categoryText} numberOfLines={1}>{product.category}</Text>
         </View>
 
         {product.applications && (
           <View style={styles.appsContainer}>
-            <Text style={styles.appsText}>{product.applications.slice(0, 2).join(', ')}</Text>
+            <Text style={styles.appsText} numberOfLines={1}>{product.applications.slice(0, 2).join(' • ')}</Text>
           </View>
         )}
 
@@ -63,10 +63,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) => {
 
 const styles = StyleSheet.create({
   card: {
-    flex: 1,
     backgroundColor: '#fff',
-    borderRadius: 8,
-    marginHorizontal: 4,
+    borderRadius: 10,
     marginVertical: 6,
     overflow: 'hidden',
     shadowColor: '#000',
@@ -77,41 +75,44 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 120,
+    height: 220,
     backgroundColor: '#f0f0f0',
   },
   content: {
     padding: 10,
   },
   name: {
-    fontSize: 12,
-    fontWeight: '600',
+    fontSize: 14,
+    lineHeight: 18,
+    fontWeight: '700',
     color: '#333',
-    marginBottom: 6,
+    marginBottom: 8,
   },
   categoryBadge: {
     backgroundColor: '#FFF3E0',
-    borderRadius: 4,
-    paddingHorizontal: 6,
-    paddingVertical: 2,
+    borderRadius: 10,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
     marginBottom: 6,
     alignSelf: 'flex-start',
+    maxWidth: '100%',
   },
   categoryText: {
     fontSize: 10,
     color: '#FF6B35',
-    fontWeight: '500',
+    fontWeight: '600',
   },
   appsContainer: {
     backgroundColor: '#E3F2FD',
-    borderRadius: 3,
-    paddingHorizontal: 4,
-    paddingVertical: 2,
+    borderRadius: 10,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
     marginBottom: 6,
     alignSelf: 'flex-start',
+    maxWidth: '100%',
   },
   appsText: {
-    fontSize: 9,
+    fontSize: 10,
     color: '#1976D2',
     fontWeight: '500',
   },
@@ -119,31 +120,31 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#f5f5f5',
-    borderRadius: 3,
-    paddingHorizontal: 4,
-    paddingVertical: 2,
+    borderRadius: 10,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
     marginBottom: 8,
     alignSelf: 'flex-start',
   },
   moqText: {
-    fontSize: 9,
+    fontSize: 10,
     color: '#666',
-    marginLeft: 3,
+    marginLeft: 4,
     fontWeight: '500',
   },
   priceRow: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginBottom: 8,
+    marginBottom: 10,
   },
   priceLabel: {
-    fontSize: 8,
+    fontSize: 9,
     color: '#999',
     marginBottom: 2,
   },
   price: {
-    fontSize: 11,
+    fontSize: 13,
     fontWeight: '700',
     color: '#333',
   },
@@ -157,17 +158,17 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#FF6B35',
-    borderRadius: 4,
-    paddingVertical: 6,
+    borderRadius: 6,
+    paddingVertical: 7,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
-    fontSize: 10,
+    fontSize: 11,
     fontWeight: '600',
-    marginLeft: 3,
+    marginLeft: 4,
   },
 });
 
