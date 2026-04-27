@@ -1,24 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   View,
-  ScrollView,
   StyleSheet,
   FlatList,
   ActivityIndicator,
   TextInput,
+  useWindowDimensions,
 } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { Product } from '../types';
-import apiService from '../services/apiService';
+import { Product as ProductType } from '../types';
 import ProductCard from '../components/ProductCard';
 
-interface Product extends Product {}
-
 const ProductsScreen: React.FC<any> = ({ navigation }) => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<ProductType[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const dispatch = useDispatch();
+  const { width } = useWindowDimensions();
+
+  const gridConfig = useMemo(() => {
+    const horizontalPadding = 16;
+    const columnGap = 10;
+    const numColumns = width >= 980 ? 4 : width >= 720 ? 3 : width >= 420 ? 2 : 1;
+    const cardWidth = (width - horizontalPadding - (numColumns - 1) * columnGap) / numColumns;
+
+    return { numColumns, cardWidth, columnGap };
+  }, [width]);
 
   useEffect(() => {
     fetchProducts();
@@ -27,7 +32,6 @@ const ProductsScreen: React.FC<any> = ({ navigation }) => {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      // Flavor Factory Product Catalog - Connected to vDosPlus inventory
       const mockProducts: any[] = [
         {
           id: '1',
@@ -136,7 +140,7 @@ const ProductsScreen: React.FC<any> = ({ navigation }) => {
     }
   };
 
-  const handleProductPress = (product: Product) => {
+  const handleProductPress = (product: ProductType) => {
     navigation.navigate('ProductDetails', { product });
   };
 
@@ -160,14 +164,17 @@ const ProductsScreen: React.FC<any> = ({ navigation }) => {
       <FlatList
         data={products}
         renderItem={({ item }) => (
-          <ProductCard
-            product={item}
-            onPress={() => handleProductPress(item)}
-          />
+          <View style={[styles.cardWrapper, { width: gridConfig.cardWidth, marginBottom: gridConfig.columnGap }]}>
+            <ProductCard
+              product={item}
+              onPress={() => handleProductPress(item)}
+            />
+          </View>
         )}
+        key={String(gridConfig.numColumns)}
         keyExtractor={(item) => item.id}
-        numColumns={2}
-        columnWrapperStyle={styles.row}
+        numColumns={gridConfig.numColumns}
+        columnWrapperStyle={gridConfig.numColumns > 1 ? styles.row : undefined}
         contentContainerStyle={styles.listContainer}
       />
     </View>
@@ -195,6 +202,10 @@ const styles = StyleSheet.create({
   },
   row: {
     justifyContent: 'space-between',
+    gap: 10,
+  },
+  cardWrapper: {
+    alignSelf: 'stretch',
   },
   loadingContainer: {
     flex: 1,

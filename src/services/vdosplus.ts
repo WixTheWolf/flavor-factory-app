@@ -136,4 +136,4 @@ class VDosPlusService {
   }
 }
 
-export default new VDosPlus Service();
+export default new VDosPlusService();

@@ -10,7 +10,8 @@
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",
     "build:android": "cd android && ./gradlew assembleRelease",
-    "build:ios": "cd ios && xcodebuild -workspace FlavorFactory.xcworkspace -scheme FlavorFactory -configuration Release"
+    "build:ios": "cd ios && xcodebuild -workspace FlavorFactory.xcworkspace -scheme FlavorFactory -configuration Release",
+    "build": "echo \"No generic build target configured for this React Native project. Use build:android or build:ios.\""
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -41,6 +42,13 @@
   },
   "jest": {
     "preset": "react-native",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
